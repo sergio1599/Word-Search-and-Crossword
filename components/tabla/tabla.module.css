@@ -2,3 +2,17 @@
 .tabla{
     font-family: 'Antic Slab', serif;
 }
+
+.selected{
+    background-color: olivedrab;
+    cursor:pointer;
+}
+
+.cursor{
+    width:10px;
+    height:10px;
+    border: 10px solid #ffffff;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+}

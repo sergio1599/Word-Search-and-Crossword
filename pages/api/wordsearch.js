@@ -1,6 +1,6 @@
 import wordsearch from "./../../functions/wordsearch";
 
-const words = ['node','sergio','daniel', 'jahir', 'arge'];
+const words = ['node','sergio','daniel', 'jahir', 'arge', 'fernada'];
 const size = 12;
 
 const getWordSearch = async (req, res) => {
