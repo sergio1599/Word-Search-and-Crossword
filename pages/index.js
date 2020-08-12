@@ -19,7 +19,7 @@ export default function Home() {
                 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap"
                       rel="stylesheet"/>
             </Head>
-            <div className="columns is-desktop is-mobile">
+            <div className="columns is-mobile is-desktop">
                 <Titulo titulo={"Parcial TGS"} subtitulo={""}/>
             </div>
             <div className="columns is-desktop is-mobile">

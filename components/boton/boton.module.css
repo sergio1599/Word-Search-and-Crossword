@@ -1,4 +1,6 @@
 .boton{
     font-family: 'Roboto Condensed', sans-serif;
-    align-content: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
