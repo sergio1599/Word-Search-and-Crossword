@@ -1,8 +1,8 @@
 
-import {useState} from 'react';
-const Boton =({entrada}) =>{
+import styles from './boton.module.css';
+const Boton =({input, action}) =>{
     return (<>
-            <button className="button is-success is-rounded">{entrada}</button>
+            <button className="button is-success is-rounded" onClick={action}> {input} {action}</button>
         </>
     )
 }
