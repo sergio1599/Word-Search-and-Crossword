@@ -5,8 +5,8 @@ import Titulo from "@components/titulo/titulo";
 import Boton from "@components/boton/boton";
 import Counter from "@components/counter/counter";
 
-export default function Home(){
-    return(
+export default function Home() {
+    return (
         <div className={styles.container}>
             <head>
                 <title>Sopa de letras</title>
