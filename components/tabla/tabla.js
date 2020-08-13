@@ -8,9 +8,6 @@ const Tabla = () => {
     if (!data) {
         return <p>Cargando sopa de letras </p>;
     }
-    <script>
-        const cursor = document.querySelector
-    </script>
     return (<>
             <div className="table-container">
                 <table className={"table is-bordered is-striped is-narrow is-hoverable is-fullwidth"} border={1} >

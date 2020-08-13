@@ -16,11 +16,11 @@ export default function Home() {
                 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap"
                       rel="stylesheet"/>
             </head>
-            <div className="columns is-desktop is-mobile">
+            <div className="is-block-desktop-only is-inline-touch">
                 <div className="column">
                     <Titulo titulo={"Parcial TGS"} subtitulo={"Sopa de letras"}/>
                     <Tabla/>
-                    <Boton input={"Volver"} link={'/index'}/>
+                    <Boton input={"Volver"} link={'/'}/>
                 </div>
             </div>
         </div>
