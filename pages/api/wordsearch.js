@@ -1,4 +1,4 @@
-import wordsearch from "./../../functions/wordsearch";
+import wordsearch from "../../functions/wordsearch";
 
 const words = ['node','sergio','daniel', 'jahir', 'arge', 'fernanda'];
 const size = 12;

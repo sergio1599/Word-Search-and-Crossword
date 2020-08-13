@@ -3,12 +3,13 @@ import styles from '@styles/Home.module.css'
 import Tabla from "@components/tabla/tabla";
 import Titulo from "@components/titulo/titulo";
 import Boton from "@components/boton/boton";
+import Counter from "@components/counter/counter";
 
-export default function Home(){
-    return(
+export default function Home() {
+    return (
         <div className={styles.container}>
             <head>
-                <title>Crucigrama</title>
+                <title>Sopa de letras</title>
                 <link rel={'stylesheet'} type={'text/css'}
                       href={'https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css'}/>
                 <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@500&display=swap" rel="stylesheet"/>
@@ -16,12 +17,13 @@ export default function Home(){
                       rel="stylesheet"/>
             </head>
             <div className="columns is-desktop is-mobile">
-                <div>
-                    <Titulo titulo={"Parcial TGS"} subtitulo={"Crucigrama"}/>
+                <div className="column">
+                    <Titulo titulo={"Parcial TGS"} subtitulo={"Sopa de letras"}/>
+                    <Tabla/>
                     <Boton input={"Volver"} link={'/index'}/>
                 </div>
             </div>
-
         </div>
     )
+
 }

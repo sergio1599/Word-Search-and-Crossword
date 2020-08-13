@@ -24,12 +24,13 @@ export default function Home() {
             </div>
             <div className="columns is-desktop is-mobile">
                 <div className="column">
-                    <Image source={'/icons/alphabet.png'} />
-                    <Boton input={"Ingresar Sopa de letras"} action={""}/>
+                    <Image source={'/icons/alphabet.png'} link={'/lettersoup'}/>
+                    <Boton input={"Ingresar Sopa de letras"} link={'/lettersoup'}/>
                 </div>
                 <div className="column">
                     <Image source={'/icons/crossword.png'}/>
-                    <Boton input={"Ingresar Crucigrama"}/>
+                    <Boton input={"Ingresar Crucigrama"} link={'/crossword'}/>
+
                 </div>
             </div>
             <div className="columns is-desktop is-mobile">

@@ -1,8 +1,8 @@
 
 import styles from './boton.module.css';
-const Boton =({input, action}) =>{
+const Boton =({input, link}) =>{
     return (<div className={styles.boton}>
-            <button className="button is-success is-rounded" onClick={action}> {input} {action}</button>
+            <a href={link} className="button is-success is-rounded">{input}</a>
         </div>
     )
 }
