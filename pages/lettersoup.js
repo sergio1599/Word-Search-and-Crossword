@@ -1,29 +1,54 @@
-import Head from 'next/head'
-import styles from '@styles/Home.module.css'
-import Tabla from "@components/tabla/tabla";
-import Titulo from "@components/titulo/titulo";
-import Boton from "@components/boton/boton";
-import Counter from "@components/counter/counter";
+import styles from '@styles/Home.module.css';
+import Tabla from '@components/tabla/tabla';
+import Titulo from '@components/titulo/titulo';
+import Boton from '@components/boton/boton';
+import wordsJson from '../functions/words.json';
+import wordsearch from '../functions/wordsearch';
 
-export default function Home() {
-    return (
-        <div className={styles.container}>
-            <head>
-                <title>Sopa de letras</title>
-                <link rel={'stylesheet'} type={'text/css'}
-                      href={'https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css'}/>
-                <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@500&display=swap" rel="stylesheet"/>
-                <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap"
-                      rel="stylesheet"/>
-            </head>
-            <div className="is-block-desktop-only is-inline-touch">
-                <div className="column">
-                    <Titulo titulo={"Parcial TGS"} subtitulo={"Sopa de letras"}/>
-                    <Tabla/>
-                    <Boton input={"Volver"} link={'/'}/>
-                </div>
-            </div>
+export default function Home(props) {
+  return (
+    <div className={styles.container}>
+      <head>
+        <title>Sopa de letras</title>
+        <link rel={'stylesheet'} type={'text/css'}
+              href={'https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css'}/>
+        <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@500&display=swap"
+              rel="stylesheet"/>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap"
+          rel="stylesheet"/>
+      </head>
+      <div className="is-block-desktop-only is-inline-touch">
+        <div className="column">
+          <Titulo titulo={'Parcial TGS'} subtitulo={'Sopa de letras'}/>
+          <Tabla {...props}/>
+          <Boton input={'Volver'} link={'/'}/>
         </div>
-    )
+      </div>
+    </div>
+  );
 
 }
+
+const shuffle = (array) => {
+  return array.sort(() => Math.random() - 0.5);
+};
+
+export const getServerSideProps = async () => {
+  const shuffledWords = shuffle([...Object.keys(wordsJson)]);
+  const words = shuffledWords.slice(0, 8)
+    .sort((a, b) => {
+      const wordA = wordsJson[a];
+      const wordB = wordsJson[b];
+      return wordB.length - wordA.length;
+    });
+  const longestWord = words[0];
+  const size = Math.ceil(longestWord.length * 1.3);
+  const wordsearchs = await wordsearch(words, size, size);
+
+  const newWords = {};
+  shuffledWords.forEach((key) => {
+    newWords[key] = wordsJson[key];
+  });
+  return { props: { ...wordsearchs, wordsJson: newWords } };
+};

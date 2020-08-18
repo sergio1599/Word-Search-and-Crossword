@@ -1,11 +1,9 @@
 import { useMemo, useState } from 'react';
-import useSWR from 'swr';
-import fetcher from '../../functions/fetcher';
 import styles from './tabla.module.css';
 
-const Tabla = () => {
+const Tabla = (props) => {
+  const data = props;
   const [selectedLetters, setSelectedLetters] = useState([]);
-  const { data } = useSWR('/api/wordsearch', fetcher);
 
   useMemo(() => {
     setSelectedLetters([]);
