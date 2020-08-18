@@ -32,6 +32,6 @@ ul.words li {
 }
 
 .solved {
-  color: olivedrab;
+  color: #ca5331;
   text-decoration: line-through;
 }
