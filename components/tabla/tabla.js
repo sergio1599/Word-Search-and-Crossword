@@ -69,6 +69,7 @@ const Tabla = (props) => {
       </table>
     </div>
     <br/>
+    <div className={styles.fontLetters}>
     <p><b>Palabras:</b></p>
     <ul className={styles.words}>
       {Object.keys(data.placed || {}).map((it, i) => {
@@ -78,6 +79,7 @@ const Tabla = (props) => {
         </li>);
       })}
     </ul>
+    </div>
   </>);
 };
 

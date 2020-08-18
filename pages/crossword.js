@@ -9,6 +9,7 @@ export default function Home(){
         <div className={styles.container}>
             <head>
                 <title>Crucigrama</title>
+                <link rel="icon" href="/icons/information.png"/>
                 <link rel={'stylesheet'} type={'text/css'}
                       href={'https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css'}/>
                 <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@500&display=swap" rel="stylesheet"/>
@@ -19,6 +20,7 @@ export default function Home(){
                 <div>
                     <Titulo titulo={"Parcial TGS"} subtitulo={"Crucigrama"}/>
                     <Boton input={"Volver"} link={'/'}/>
+                    <Boton input={'Reiniciar'} link={'/crossword'}/>
                 </div>
             </div>
 

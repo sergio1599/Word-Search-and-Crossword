@@ -8,7 +8,7 @@
 }
 
 .table td.selected {
-  background-color: olivedrab;
+  background-color: #00947e;
   color: #fff;
 }
 
@@ -32,6 +32,10 @@ ul.words li {
 }
 
 .solved {
-  color: #ca5331;
+  color: #2160c4;
   text-decoration: line-through;
+}
+
+.fontLetters{
+  font-family: 'Indie Flower', cursive;
 }

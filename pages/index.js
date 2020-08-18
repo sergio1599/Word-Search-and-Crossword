@@ -16,6 +16,7 @@ export default function Home() {
       <link
         href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap"
         rel="stylesheet"/>
+      <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet"/>
     </Head>
     <div className={'hero is-fullheight'}>
       <div className={'hero-body'} style={{ flexDirection: 'column', justifyContent: 'center' }}>
