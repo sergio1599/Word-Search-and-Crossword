@@ -17,7 +17,12 @@ const getWordSearch = async (req, res) => {
   const longestWord = words[0];
   const size = Math.ceil(longestWord.length * 2);
   const wordsearchs = await wordsearch(words, size, size);
-  return res.json({ ...wordsearchs, wordsJson: shuffledWords });
+
+  const newWords = {};
+  shuffledWords.forEach((key) => {
+    newWords[key] = wordsJson[key];
+  });
+  return res.json({ ...wordsearchs, wordsJson: newWords });
 };
 
 
