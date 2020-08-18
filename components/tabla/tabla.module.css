@@ -1,18 +1,37 @@
-
-.tabla{
-    font-family: 'Antic Slab', serif;
+.table td {
+  cursor: pointer;
+  width: 32px !important;
+  height: 32px !important;
+  text-align: center !important;
+  padding: 0 !important;
+  vertical-align: middle !important;
 }
 
-.selected{
-    background-color: olivedrab;
-    cursor:pointer;
+.table td.selected {
+  background-color: olivedrab;
+  color: #fff;
 }
 
-.cursor{
-    width:10px;
-    height:10px;
-    border: 10px solid #ffffff;
-    background: black;
-    border-radius: 50%;
-    position: absolute;
+.cursor {
+  width: 10px;
+  height: 10px;
+  border: 10px solid #ffffff;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+}
+
+ul.words {
+  list-style: disc;
+  margin-left: 1rem;
+}
+
+ul.words li {
+  margin: .4rem 0;
+  cursor: pointer;
+}
+
+.solved {
+  color: olivedrab;
+  text-decoration: line-through;
 }
