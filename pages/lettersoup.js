@@ -18,18 +18,16 @@ export default function Home(props) {
           href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap"
           rel="stylesheet"/>
       </head>
-      <div className="is-block-desktop-only is-inline-touch">
+      <div className="column">
+        <Titulo titulo={'Parcial TGS'} subtitulo={'Sopa de letras'}/>
+        <Tabla {...props} />
+      </div>
+      <div className="columns">
         <div className="column">
-          <Titulo titulo={'Parcial TGS'} subtitulo={'Sopa de letras'}/>
-          <Tabla {...props} />
+          <Boton input={'Volver'} link={'/'}/>
         </div>
-        <div className="columns">
-          <div className="column">
-            <Boton input={'Volver'} link={'/'}/>
-          </div>
-          <div className="column">
-            <Boton input={'Reiniciar'} link={'/lettersoup'}/>
-          </div>
+        <div className="column">
+          <Boton input={'Reiniciar'} link={'/lettersoup'}/>
         </div>
       </div>
     </div>
