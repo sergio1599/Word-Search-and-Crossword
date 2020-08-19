@@ -10,10 +10,11 @@ export default function Home(props) {
   // console.log(props);
 
   return (
+    <div className={'is-block-desktop-only is-inline-touch'}>
     <div className={styles.container}>
       <head>
         <title>Crucigrama</title>
-        <link rel="icon" href="/icons/information.png"/>
+        <link rel="icon" href="/icons/crossword.png/"/>
         <link rel={'stylesheet'} type={'text/css'}
               href={'https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css'}/>
         <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@500&display=swap"
@@ -34,6 +35,7 @@ export default function Home(props) {
           <Boton input={'Reiniciar'} link={'/crossword'}/>
         </div>
       </div>
+    </div>
     </div>
   );
 

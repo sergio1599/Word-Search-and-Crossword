@@ -67,11 +67,12 @@ ul.words li {
 
 .solved {
   text-decoration: line-through;
+  color: #2160c4;
 }
 
 .fontTittle{
   font-family: 'Lemonada', cursive;
-  color: #2160c4;
+  color: #00947e;
 }
 .fontLetters {
   font-family: 'Indie Flower', cursive;

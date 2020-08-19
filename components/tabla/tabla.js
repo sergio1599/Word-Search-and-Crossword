@@ -73,7 +73,7 @@ const Tabla = (props) => {
     </div>
     <br/>
     <div className={styles.fontLetters}>
-      <p><b>Palabras:</b></p>
+      <p><b className={styles.fontTittle}>Palabras:</b></p>
       <ul className={styles.words}>
         {Object.keys(data.placed || {}).map((it, i) => {
           return (<li key={i} className={getSelectedWords().includes(it) ? styles.solved : ''}

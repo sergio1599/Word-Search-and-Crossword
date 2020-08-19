@@ -24,6 +24,7 @@
 ul.words {
   list-style: disc;
   margin-left: 1rem;
+  color: black;
 }
 
 ul.words li {
@@ -38,4 +39,9 @@ ul.words li {
 
 .fontLetters{
   font-family: 'Indie Flower', cursive;
+}
+
+.fontTittle{
+  font-family: 'Lemonada', cursive;
+  color: #00947e;
 }
