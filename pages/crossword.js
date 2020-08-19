@@ -44,7 +44,7 @@ const shuffle = (array) => {
 };
 
 export const getServerSideProps = async () => {
-  const words = shuffle([...Object.keys(wordsJson)]).slice(0, 3);
+  const words = shuffle([...Object.keys(wordsJson)]).slice(0, 6);
   const newWords = {};
   words.forEach((key) => {
     newWords[key] = wordsJson[key];

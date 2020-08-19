@@ -22,13 +22,14 @@
   top: 2px;
   left: 4px;
   font-size: .6rem;
-  color: red;
+  color: #2160c4;
 }
 
 .table td input {
   width: 32px !important;
   height: 32px !important;
   text-align: center !important;
+  color: #2160c4;
 }
 
 .table td.selected {
@@ -37,8 +38,8 @@
 }
 
 .table td.black {
-  background-color: #000;
-  color: #000;
+  background-color: #3C3C3C;
+  color: #3C3C3C;
 }
 
 .table td.black input {
@@ -56,7 +57,7 @@
 
 ul.words {
   list-style: disc;
-  margin-left: 1rem;
+  margin-left: 1rem; 
 }
 
 ul.words li {
@@ -65,12 +66,16 @@ ul.words li {
 }
 
 .solved {
-  color: #2160c4;
   text-decoration: line-through;
 }
 
+.fontTittle{
+  font-family: 'Lemonada', cursive;
+  color: #2160c4;
+}
 .fontLetters {
   font-family: 'Indie Flower', cursive;
+  color:black;
 }
 
 ul.words {

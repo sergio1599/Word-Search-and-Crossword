@@ -41,7 +41,7 @@ const shuffle = (array) => {
 
 export const getServerSideProps = async () => {
   const shuffledWords = shuffle([...Object.keys(wordsJson)]);
-  const words = shuffledWords.slice(0, 3)
+  const words = shuffledWords.slice(0, 6) 
     .sort((a, b) => {
       return b.length - a.length;
     });

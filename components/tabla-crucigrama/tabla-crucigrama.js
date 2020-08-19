@@ -85,7 +85,9 @@ const TablaCrucigrama = (props) => {
     </div>
     <br/>
     <div className={styles.fontLetters}>
-      <p><b>Descripciones:</b></p>
+      <div className={styles.fontTittle}>
+       <p><b>Descripciones:</b></p>
+      </div>
       <ul className={styles.words}>
         {(props.wordsWithPositions || []).map((word, i) => {
           return (
