@@ -1,13 +1,9 @@
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
 import styles from './tabla.module.css';
 
 const Tabla = (props) => {
   const data = props;
   const [selectedLetters, setSelectedLetters] = useState([]);
-
-  useMemo(() => {
-    setSelectedLetters([]);
-  }, [data]);
 
   if (!data) {
     return <p>Cargando sopa de letras</p>;
@@ -49,6 +45,13 @@ const Tabla = (props) => {
     window.alert(data.wordsJson[word]);
   };
 
+  let solved = 0;
+  const actualWords = Object.keys(data.placed || {});
+  for (let i = 0; i < actualWords.length; i++) {
+    if (getSelectedWords().includes(actualWords[i])) solved += 1;
+  }
+  if (solved >= actualWords.length) window.alert('Sopa de Letras completa!');
+
   return (<>
     <div className="table-container">
       <table
@@ -70,15 +73,15 @@ const Tabla = (props) => {
     </div>
     <br/>
     <div className={styles.fontLetters}>
-    <p><b>Palabras:</b></p>
-    <ul className={styles.words}>
-      {Object.keys(data.placed || {}).map((it, i) => {
-        return (<li key={i} className={getSelectedWords().includes(it) ? styles.solved : ''}
-                    onClick={() => showWordDescription(it)}>
-          {it}
-        </li>);
-      })}
-    </ul>
+      <p><b>Palabras:</b></p>
+      <ul className={styles.words}>
+        {Object.keys(data.placed || {}).map((it, i) => {
+          return (<li key={i} className={getSelectedWords().includes(it) ? styles.solved : ''}
+                      onClick={() => showWordDescription(it)}>
+            {it}
+          </li>);
+        })}
+      </ul>
     </div>
   </>);
 };

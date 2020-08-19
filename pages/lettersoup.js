@@ -11,24 +11,24 @@ export default function Home(props) {
       <head>
         <title>Sopa de letras</title>
         <link rel={'stylesheet'} type={'text/css'}
-          href={'https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css'} />
+              href={'https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css'}/>
         <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@500&display=swap"
-          rel="stylesheet" />
+              rel="stylesheet"/>
         <link
           href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap"
-          rel="stylesheet" />
+          rel="stylesheet"/>
       </head>
       <div className="is-block-desktop-only is-inline-touch">
         <div className="column">
-        <Titulo titulo={'Parcial TGS'} subtitulo={'Sopa de letras'}/>
+          <Titulo titulo={'Parcial TGS'} subtitulo={'Sopa de letras'}/>
           <Tabla {...props} />
         </div>
         <div className="columns">
-          <div class="column">
-            <Boton input={'Volver'} link={'/'} />
+          <div className="column">
+            <Boton input={'Volver'} link={'/'}/>
           </div>
-          <div class="column">
-            <Boton input={'Reiniciar'} link={'/lettersoup'} />
+          <div className="column">
+            <Boton input={'Reiniciar'} link={'/lettersoup'}/>
           </div>
         </div>
       </div>
@@ -43,11 +43,9 @@ const shuffle = (array) => {
 
 export const getServerSideProps = async () => {
   const shuffledWords = shuffle([...Object.keys(wordsJson)]);
-  const words = shuffledWords.slice(0, 7)
+  const words = shuffledWords.slice(0, 3)
     .sort((a, b) => {
-      const wordA = wordsJson[a];
-      const wordB = wordsJson[b];
-      return wordB.length - wordA.length;
+      return b.length - a.length;
     });
   const longestWord = words[0];
   const size = Math.ceil(longestWord.length * 1.3);
