@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import styles from '@styles/Home.module.css';
 import Tabla from '@components/tabla/tabla';
 import Titulo from '@components/titulo/titulo';
@@ -9,8 +10,9 @@ import wordsearch from '../functions/wordsearch';
 export default function Home(props) {
   return (
     <div className={styles.container}>
-      <head>
+      <Head>
         <title>Sopa de letras</title>
+        <link rel="icon" href="/icons/alphabet.png/"/>
         <link rel={'stylesheet'} type={'text/css'}
           href={'https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css'} />
         <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@500&display=swap"
@@ -18,7 +20,7 @@ export default function Home(props) {
         <link
           href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap"
           rel="stylesheet" />
-      </head>
+      </Head>
       <div className="column" >
         <Titulo titulo={'Parcial TGS'} subtitulo={'Sopa de letras'} />
         <Tabla {...props} />

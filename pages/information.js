@@ -13,7 +13,7 @@ export default function Home(props) {
             <div className={styles.container}>
                 <Head>
                     <title>Teoría General de Sistemas</title>
-                    <link rel="icon" href="/icons/crossword.png/" />
+                    <link rel="icon" href="/icons/monitor.png/" />
                     <link rel={'stylesheet'} type={'text/css'}
                         href={'https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css'} />
                     <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@500&display=swap"
