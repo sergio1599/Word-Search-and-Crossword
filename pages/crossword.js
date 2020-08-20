@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import styles from '@styles/Home.module.css';
 import Titulo from '@components/titulo/titulo';
 import Boton from '@components/boton/boton';
@@ -13,7 +14,7 @@ export default function Home(props) {
   return (
     <div className={'is-block-desktop-only is-inline-touch'}>
     <div className={styles.container}>
-      <head>
+      <Head>
         <title>Crucigrama</title>
         <link rel="icon" href="/icons/crossword.png/"/>
         <link rel={'stylesheet'} type={'text/css'}
@@ -23,11 +24,9 @@ export default function Home(props) {
         <link
           href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap"
           rel="stylesheet"/>
-      </head>
-      <div className="column">
-        <Titulo titulo={'Parcial TGS'} subtitulo={'Crucigrama'}/>
-        <TablaCrucigrama {...props}/>
-      </div>
+      </Head>
+      <Titulo titulo={'Parcial TGS'} subtitulo={'Crucigrama'}/>
+      <TablaCrucigrama {...props}/>
       <div className="columns">
         <div className="column">
           <Boton input={'Volver'} link={'/'}/>

@@ -63,7 +63,7 @@ const TablaCrucigrama = (props) => {
   if (solved >= props.wordsWithPositions.length) window.alert('Crucigrama completo!');
 
   return (<>
-    <div className="table-container">
+    <div className={`table-container ${styles.tablecontainer}`}>
       <table
         className={`table ${styles.table}`}
         border={1}>

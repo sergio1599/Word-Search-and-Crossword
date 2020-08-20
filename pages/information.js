@@ -1,8 +1,8 @@
-import styles from '@styles/Home.module.css';
+import Head from 'next/head';
 import Titulo from '@components/titulo/titulo';
 import Image from '@components/image/image';
 import Footer from '@components/footer/footer';
-
+import styles from '@styles/Home.module.css';
 
 export default function Home(props) {
 
@@ -11,7 +11,7 @@ export default function Home(props) {
     return (
         <div className={'is-block-desktop-only is-inline-touch'}>
             <div className={styles.container}>
-                <head>
+                <Head>
                     <title>Teoría General de Sistemas</title>
                     <link rel="icon" href="/icons/crossword.png/" />
                     <link rel={'stylesheet'} type={'text/css'}
@@ -21,7 +21,7 @@ export default function Home(props) {
                     <link
                         href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap"
                         rel="stylesheet" />
-                </head>
+                </Head>
                 <div className="column is-half">
                     <Titulo titulo={'¿QUÉ ES LA TEORÍA GENERAL DE SISTEMAS?'} />
                     <br></br>
