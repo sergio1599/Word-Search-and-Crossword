@@ -1,8 +1,8 @@
 import styles from '@styles/Home.module.css';
 import Titulo from '@components/titulo/titulo';
-import Boton from '@components/boton/boton';
 import Image from '@components/image/image';
 import Footer from '@components/footer/footer';
+
 
 export default function Home(props) {
 
@@ -25,7 +25,7 @@ export default function Home(props) {
                 <div className="column is-half">
                     <Titulo titulo={'¿QUÉ ES LA TEORÍA GENERAL DE SISTEMAS?'} />
                     <br></br>
-                    <p>La teoría de sistemas o teoría general de los sistemas es el estudio interdisciplinario de los sistemas en general. Su propósito es estudiar los principios aplicables a los sistemas en cualquier nivel en todos los campos de la investigación.</p>
+                    <p className={styles.fontLetters}>La teoría de sistemas o teoría general de los sistemas es el estudio interdisciplinario de los sistemas en general. Su propósito es estudiar los principios aplicables a los sistemas en cualquier nivel en todos los campos de la investigación.</p>
                     <br></br>
                     <p>En 1950 Ludwig von Bertalanffy planteó la teoría general de sistemas propiamente dicha. Posteriormente, en la década de los setenta, Humberto Maturana desarrolló el concepto de autopoiesis, el que da cuenta de la organización de los sistemas vivos
                     como redes cerradas de autoproducción de los componentes que las constituyen. W. Ross Ashby y Norbert Wiener desarrollaron la teoría matemática de la comunicación y control de sistemas a través de la regulación de la retroalimentación (cibernética),

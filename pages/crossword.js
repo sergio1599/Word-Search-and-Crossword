@@ -2,6 +2,7 @@ import styles from '@styles/Home.module.css';
 import Titulo from '@components/titulo/titulo';
 import Boton from '@components/boton/boton';
 import wordsJson from '../functions/words.json';
+import Footer from '@components/footer/footer';
 import Crossword from '../functions/crossword';
 import TablaCrucigrama from '@components/tabla-crucigrama/tabla-crucigrama';
 
@@ -33,9 +34,13 @@ export default function Home(props) {
         </div>
         <div className="column">
           <Boton input={'Reiniciar'} link={'/crossword'}/>
+          <br></br>
         </div>
       </div>
     </div>
+    <div className={'hero-footer'}>
+        <Footer />
+      </div>
     </div>
   );
 
